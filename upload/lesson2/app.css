@@ -1,0 +1,35 @@
+body { 
+  border: 4px dashed #ccc; 
+  padding-left: 8px;
+}
+.my-form {
+  margin-top: 10px;
+}
+.gallery {
+  margin: 10px;
+}
+.gallery img {
+  margin-left: 16px;
+}
+
+#fileuploadProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#fileuploadBar {
+  width: 1%;
+  height: 30px;
+  background-color:green;
+}
+
+#cloudinaryuploadProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#cloudinaryuploadBar {
+  width: 1%;
+  height: 30px;
+  background-color: red;
+}

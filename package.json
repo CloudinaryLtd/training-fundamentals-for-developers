@@ -1,0 +1,22 @@
+{
+  "name": "training-fundamentals-for-developers",
+  "version": "1.0.0",
+  "description": "Sample codes using Cloudinary NodeJS SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudinaryLtd/training-fundamentals-for-developers.git"
+  },
+  "author": "Cloudinary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CloudinaryLtd/training-fundamentals-for-developers/issues"
+  },
+  "homepage": "https://github.com/CloudinaryLtd/training-fundamentals-for-developers#readme",
+  "dependencies": {
+    "cloudinary": "^1.13.2"
+  }
+}
