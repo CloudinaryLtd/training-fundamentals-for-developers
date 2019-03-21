@@ -1,6 +1,6 @@
-const cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary').v2;
 
-cloudinary.v2.uploader.upload('../../assets/images/kitten.jpg', {
+cloudinary.uploader.upload('../../assets/images/kitten.jpg', {
         public_id: 'kitten'
     })
     .then(uploadResult => console.log(uploadResult))
