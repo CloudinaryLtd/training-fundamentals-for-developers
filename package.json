@@ -1,17 +1,17 @@
 {
   "name": "training-fundamentals-for-developers",
-  "version": "1.0.0",
-  "description": "Sample codes using Cloudinary NodeJS SDK",
+  "version": "0.0.1",
+  "description": "Repository to be used with Cloudinary's Training Fundamentals for Developers course.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run:lesson02": "node lesson02/app.js",
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CloudinaryLtd/training-fundamentals-for-developers.git"
   },
   "author": "Cloudinary",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CloudinaryLtd/training-fundamentals-for-developers/issues"
   },
