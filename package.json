@@ -4,7 +4,7 @@
   "description": "Repository to be used with Cloudinary's Training Fundamentals for Developers course.",
   "main": "index.js",
   "scripts": {
-    "run:lesson02": "node lesson02/app.js",
+    "run:lesson2": "node lesson2/app.js",
   },
   "repository": {
     "type": "git",
