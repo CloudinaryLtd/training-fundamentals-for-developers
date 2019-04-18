@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CloudinaryLtd/training-fundamentals-for-developers#readme",
   "dependencies": {
-    "cloudinary": "^1.13.2"
+    "cloudinary": "^1.13.2",
+    "dotenv": "^7.0.0"
   }
 }
