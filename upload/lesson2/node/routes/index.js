@@ -13,7 +13,7 @@ const uploadImage = async filename => {
   try {
     const photo = await cloudinary.uploader.upload(filename, {
       use_filename: true,
-      unique: false
+      unique_filename: false
     });
     // return the "raw" asset (uncomment the return statement below)
     // return photo;
@@ -21,7 +21,8 @@ const uploadImage = async filename => {
     return await cloudinary.url(photo.public_id, {
       width: 400,
       quality: 'auto',
-      fetch_format: 'auto'
+      fetch_format: 'auto',
+      secure: true
     });
 
   } catch (error) {
