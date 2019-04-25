@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  if !photo
+    p Upload a media file to Cloudinary via this form:
+    form(method='post', action='/upload', enctype='multipart/form-data')
+      input(type='file', name='file')
+      input(type='submit', value='Upload')
+  if photo && typeof photo === 'object'
+    p Information about the uploaded asset:
+    pre #{JSON.stringify(photo, null, 2)}
+    img(src=photo.secure_url)
+  if photo && typeof photo !== 'object'
+    p Your transformed image:
+    img(src=photo)
