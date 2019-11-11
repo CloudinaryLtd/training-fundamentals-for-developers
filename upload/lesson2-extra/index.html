@@ -15,15 +15,15 @@
   <button id="upload_widget" class="cloudinary-button">Upload files</button>
 
   <script type="text/javascript">  
-    const cloudName = 'tamas-demo';
-    const uploadPreset = 'v3gft0hq';
+    const cloudName = '';
+    const uploadPreset = '';
     const myWidget = cloudinary.createUploadWidget({
       cloudName,
       uploadPreset,
       // sources: ['local', 'url']
       }, (error, result) => { 
         if (!error && result && result.event === 'success') { 
-          console.log(`Done! Here is the image info: ${result.info}`); 
+          console.log(`Done! Here is the image info: ${JSON.stringify(result.info)}`); 
         }
       }
     )
