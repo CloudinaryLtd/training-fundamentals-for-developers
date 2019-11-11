@@ -1,13 +1,12 @@
 const cloudinary = require('cloudinary').v2;
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET
-});
+
 
 const path = require('path');
 const applicationDirectory = path.dirname(require.main.filename);
+console.log("applicationDirectory",applicationDirectory)
 
+//cloudinary returns a promise
+//this function returns a URL string 
 const uploadImage = async filename => {
   filename = `${applicationDirectory}/uploads/${filename}`;
   try {
@@ -15,8 +14,11 @@ const uploadImage = async filename => {
       use_filename: true,
       unique_filename: false
     });
-    // return the "raw" asset (uncomment the return statement below)
+    console.log('after cloudinary upload',photo)
+    
+    //return the "raw" asset (uncomment the return statement below)
     // return photo;
+
     // return transformed img (uncomment the return statement below)
     return await cloudinary.url(photo.public_id, {
       width: 400,
@@ -38,13 +40,16 @@ const index = (req, res) => {
 };
 
 const upload = async (req, res) => {
-  const uploadedFile = req.files.file[0];
+  const uploadedFile = req.files.file[0]; //use the file that multer attached to the request
   const filename = uploadedFile.filename;
+  console.log('filename',filename)
   try {
     const photo = await uploadImage(filename);
+    console.log('photo',photo)
     req.app.set('photo', photo);
     return res.redirect(req.get('referer'));
   } catch(error) {
+    console.log('upload error',error)
     throw new Error(error);
   }
 };

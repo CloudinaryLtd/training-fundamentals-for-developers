@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "cloudinary-jquery-file-upload": "^2.6.2",
     "blueimp-file-upload": "^9.28.0",
-    "jquery": "^3.3.1"
+    "cloudinary-jquery-file-upload": "^2.6.2",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {},
   "scripts": {

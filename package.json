@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "Repository to be used with Cloudinary's Training Fundamentals for Developers course.",
   "main": "index.js",
-  "scripts": {
-    "run:lesson2": "node upload/lesson2/app.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CloudinaryLtd/training-fundamentals-for-developers.git"
@@ -18,6 +16,7 @@
   "homepage": "https://github.com/CloudinaryLtd/training-fundamentals-for-developers#readme",
   "dependencies": {
     "cloudinary": "^1.13.2",
-    "dotenv": "^7.0.0"
+    "dotenv": "^7.0.0",
+    "http-server": "^0.11.1"
   }
 }
