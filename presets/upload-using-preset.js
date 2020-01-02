@@ -1,7 +1,7 @@
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-cloudinary.uploader.upload('../assets/images/mrwhiskers.jpg', {
+cloudinary.uploader.upload('assets/images/mrwhiskers.jpg', {
   public_id: 'mrwhiskers',
   upload_preset: 'training_preset'
 })
