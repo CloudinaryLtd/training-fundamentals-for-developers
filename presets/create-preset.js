@@ -4,7 +4,7 @@ const cloudinary = require('cloudinary').v2;
 cloudinary.api.create_upload_preset({
   name: 'training_preset',
   unsigned: false,
-  tags: 'cat',
+  tags: 'cute',
   folder: 'cute_animals',
   allowed_formats: 'jpg, png'
 })
