@@ -28,6 +28,7 @@ const uploadImage = async filename => {
     });
 
   } catch (error) {
+    console.log('uploadImage error',JSON.stringify(error))
     throw new Error(error);
   }
 };
@@ -49,8 +50,7 @@ const upload = async (req, res) => {
     req.app.set('photo', photo);
     return res.redirect(req.get('referer'));
   } catch(error) {
-    console.log('upload error',error)
-    throw new Error(error);
+    console.log('upload error',JSON.stringify(error))
   }
 };
 
