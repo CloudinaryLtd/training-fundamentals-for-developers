@@ -1,7 +1,7 @@
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-cloudinary.uploader.upload('../assets/images/woman.jpg', {
+cloudinary.uploader.upload('assets/images/woman.jpg', {
   public_id: 'woman',
   upload_preset: 'training_transformation_apply'
 })
