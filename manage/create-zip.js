@@ -5,5 +5,5 @@ cloudinary.uploader.create_zip({
     tags: 'animal',
     resource_type: 'image'
   })
-  .then(uploadResult => console.log(uploadResult))
+  .then(result => console.log(result))
   .catch(error => console.error(error));
