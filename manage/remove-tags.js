@@ -1,6 +1,6 @@
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-cloudinary.uploader.remove_tag('animal', ['kitten', 'giraffe'])
-  .then(uploadResult => console.log(uploadResult))
+cloudinary.uploader.remove_tag('wild', ['kitten', 'giraffe'])
+  .then(result => console.log(result))
   .catch(error => console.error(error));
