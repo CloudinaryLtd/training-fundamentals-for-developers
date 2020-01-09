@@ -2,5 +2,5 @@ require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
 cloudinary.uploader.rename('kitten', 'super-cute-kitten')
-  .then(uploadResult => console.log(uploadResult))
+  .then(result => console.log(result))
   .catch(error => console.error(error));
