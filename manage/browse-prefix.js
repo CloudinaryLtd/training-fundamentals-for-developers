@@ -2,8 +2,8 @@ require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
 cloudinary.api.resources({
-    type: 'upload',
-    prefix: 'kitten'
+    resource_type: 'image',
+    prefix: 'cute_animals'
   })
-  .then(uploadResult => console.log(uploadResult))
+  .then(result => console.log(result))
   .catch(error => console.error(error));
