@@ -1,7 +1,7 @@
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-cloudinary.uploader.explicit("kitten", {
+cloudinary.uploader.explicit('kitten', {
     type: 'upload',
     tags: 'baby'
   })
