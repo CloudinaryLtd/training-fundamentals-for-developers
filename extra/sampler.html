@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transforms</title>
+  <style>
+    .bdr {
+      border: 1px solid lightgray;
+    }
+    .container {
+      display:flex;
+      flex-wrap: wrap;
+    }
+    .container div{
+      width:150px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <h1>Changing AR from 2:3 to 1:1</h1>
+<h2>Could apply g_auto but not applied</h2>
+  <div class="container">
+    <div>
+      <p>crop</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_crop,h_150,w_150/face_top.jpg">
+    </div>
+    <div>
+      <p>thumb</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_thumb,h_150,w_150/face_top.jpg">
+    </div> 
+    <div>
+      <p>fill</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_fill,h_150,w_150/face_top.jpg">
+    </div>
+    <div>
+      <p>fill pad</p>
+      NA
+    </div>
+  </div>
+<h2>Apply g_auto</h2>
+  <div class="container">
+    <div>
+      <p>crop g_auto</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_crop,h_150,w_150,g_auto/face_top.jpg">
+    </div> 
+    <div>
+      <p>thumb g_auto</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_thumb,h_150,w_150,g_auto/face_top.jpg">
+    </div>
+  
+    <div>
+      <p>fill g_auto</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_fill,h_150,w_150,g_auto/face_top.jpg">
+    </div>
+    <div>
+      <p>fill pad g_auto</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_fill_pad,g_auto,h_150,w_150/face_top.jpg">
+    </div>
+  </div>
+<h2>Can not apply g_auto</h2>
+  <div class="container">
+    <div>
+      <p>limit</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_limit,h_150,w_150,ar_1:1/face_top.jpg">
+    </div>
+  
+    <div>
+      <p>fit</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_fit,h_150,w_150/face_top.jpg">
+    </div>
+   
+    <div>
+      <p>limit pad</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_lpad,h_150,w_150,b_green/face_top.jpg">
+    </div>
+    <div>
+      <p>limit fill</p>
+      <img class="bdr" height="150" width="150"
+        src="https://res.cloudinary.com/demo/image/upload/c_lfill,h_150,w_150/face_top.jpg">
+    </div>
+  
+  </div>
+  <div>
+    <h2>original 283 x 424 ar 2:3</h2  >
+    <img class="bdr original" src="https://res.cloudinary.com/demo/image/upload/face_top.jpg">
+  </div>
+</body>
+
+</html>

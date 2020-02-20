@@ -17,6 +17,7 @@
   "dependencies": {
     "cloudinary": "^1.13.2",
     "dotenv": "^7.0.0",
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "open": "^7.0.2"
   }
 }

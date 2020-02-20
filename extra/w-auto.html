@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Repsonsive</title>
+ 
+  <script src="https://unpkg.com/cloudinary-core@2.6.3/cloudinary-core-shrinkwrap.min.js" type="text/javascript">
+  </script>
+
+</head>
+
+<body>
+  <img class="cld-responsive" data-src="https://res.cloudinary.com/demo/image/upload/w_auto,c_scale/smiling_man.jpg">
+ 
+  <script type="text/javascript">
+    const cl = cloudinary.Cloudinary.new({
+      cloud_name: "demo"
+    });
+    cl.responsive();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cloudinary Browser Upload</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/10.7.0/js/vendor/jquery.ui.widget.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/10.7.0/js/jquery.iframe-transport.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/10.7.0/js/jquery.fileupload.min.js"></script>
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-jquery-file-upload/2.8.0/cloudinary-jquery-file-upload.min.js">
+  </script>
+
+
+
+  <script src="app.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <form class="my-form">
+    <div class="form_line">
+      <h2>Upload files with the file dialogue or by dragging and dropping images onto the marked box</h2>
+      <div class="form_controls">
+        <div class="upload_button_holder">
+          <input type="file" name="file" class="cloudinary_fileupload" multiple>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="gallery"></div>
+  <div id="fileuploadProgress">
+    <h3>File upload progress</h3>
+    <div id="fileuploadBar"></div>
+  </div>
+  <div id="cloudinaryuploadProgress">
+    <h3>Cloudinary upload progress</h3>
+    <div id="cloudinaryuploadBar"></div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(() => {
+      /*
+       * change these values
+       */
+      const cloud_name = '';
+      const unsignedUploadPreset = '';
+      /**  **/
+
+      const fileuploadBar = $('#fileuploadBar');
+      const cloudinaryuploadBar = $('#cloudinaryuploadBar');
+
+      $.cloudinary.config({
+        cloud_name
+      })
+
+      $('.cloudinary_fileupload').unsigned_cloudinary_upload(unsignedUploadPreset, {
+          cloud_name,
+        }, {
+          multiple: true
+        })
+        .bind('fileuploadprogress', function (e, data) {
+          console.log(`fileuploadprogress data.loaded: ${data.loaded},data.total: ${data.total}`)
+          fileuploadBar.css('width', `${Math.round((data.loaded * 100.0) / data.total)}%`);
+        })
+        .bind('cloudinaryprogress', function (e, data) {
+          console.log(`cloudinaryprogress data.loaded: ${data.loaded},data.total: ${data.total}`)
+          cloudinaryuploadBar.css('width', `${Math.round((data.loaded * 100.0) / data.total)}%`);
+        })
+        .bind('fileuploaddone', function (e, data) {
+          console.log(`fileuploaddone data.loaded: ${data.loaded},data.total: ${data.total}`)
+        })
+        .bind('cloudinarydone', function (e, data) {
+          console.log('Upload result', data.result);
+          const image = $.cloudinary.image(
+            data.result.public_id, {
+              secure: true,
+              width: 150,
+              crop: 'scale',
+            });
+          $('.gallery').prepend(image);
+        });
+    });
+  </script>
+</body>
+
+</html>

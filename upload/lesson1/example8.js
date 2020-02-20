@@ -1,6 +1,6 @@
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-cloudinary.uploader.upload('https://upload.wikimedia.org/wikipedia/commons/6/68/Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg')
+cloudinary.uploader.upload('https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg')
     .then(uploadResult => console.log(uploadResult))
     .catch(error => console.error(error));

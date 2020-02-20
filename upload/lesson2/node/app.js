@@ -15,7 +15,8 @@ if (typeof (process.env.CLOUDINARY_URL) === 'undefined') {
 } else {
   // Must call config() to register env variables 
   // don't log config in production environment
-  console.log('cloudinary config:',cloudinary.config());
+  cloudinary.config()
+  console.log('cloudinary config:',"registered");
 }
 
 const express = require('express');
@@ -37,6 +38,8 @@ const routes = require('./routes');
 const port = 3000;
 
 app.set('view engine', 'pug');
+app.set('views', `${__dirname}/views`);
+app.set('photo', '');
 
 // set up routes
 app.get('/', routes.index);
