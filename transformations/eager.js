@@ -2,9 +2,7 @@ require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
 cloudinary.api.create_upload_preset({
-  name: 'training_transformation_apply_async',
-  eager_async: true,
-  notification_url: "https://webhook.site/a11dfa23-422d-4d0a-af8a-ce691ad25954",
+  name: 'training_transformation_apply',
   unsigned: false,
   eager: [{
     width: 400,

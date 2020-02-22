@@ -2,7 +2,7 @@ require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
 cloudinary.api.create_upload_preset({
-  name: 'training_incoming_example1',
+  name: 'training_incoming_example',
   unsigned: false,
   transformation: {
       width: 400,

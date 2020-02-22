@@ -6,7 +6,6 @@
   "dependencies": {
     "blueimp-file-upload": "^9.28.0",
     "cloudinary-jquery-file-upload": "^2.6.2",
-    "http-server": "^0.12.1",
     "jquery": "^3.4.1"
   },
   "devDependencies": {},

@@ -7,5 +7,3 @@ cloudinary.uploader.upload('assets/images/giraffe.jpg', {
     })
     .then(uploadResult => console.log(uploadResult))
     .catch(error => console.error(error));
-
-    
