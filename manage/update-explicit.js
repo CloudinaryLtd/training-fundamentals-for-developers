@@ -6,7 +6,7 @@ cloudinary.uploader.explicit("kitten", {
     eager: [{
         width: 400,
         height: 400,
-        crop: "crop",
+        crop: "fill",
         gravity: "face"
       },
       {
