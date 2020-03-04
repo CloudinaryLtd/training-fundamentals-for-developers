@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam Brace - About Me</title>
+    <style type="text/css">
+      body {
+        font-size: 14px;
+        font-family: calibri, arial, sans-serif;
+        color: #474543;
+        background-color: #e5dfd3;
+        padding-top: 20px;
+      }
+      h1 {
+        text-align: center;
+        text-transform: lowercase;
+        font-family: georgia, times, serif;
+        font-style: italic;
+        font-size: 30px;
+        letter-spacing: 1.2px;
+      }
+      a {
+        color: #cabea6;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      p {
+        margin-bottom: 25px;
+        text-align: justify;
+      }
+      .content {
+        width: 80%;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border: 3px solid #cabea6;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: #f4efe6;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>About me</h1>
+    <div class="content">
+      <img
+        data-src="https://res.cloudinary.com/sambrace/image/upload/w_auto,c_scale/v1583340831/breakpoint-puppy.jpg"
+        class="cld-responsive"
+      />
+      <p>
+        Of passion intentions love evil. Horror overcome passion strong chaos.
+        Strong overcome passion ocean insofar contradict ubermensch contradict
+        love enlightenment ultimate spirit pious.
+      </p>
+      <p>
+        Self ultimate good merciful decieve love reason madness. Derive burying
+        inexpedient truth chaos. Philosophy marvelous pious value superiority
+        grandeur hatred faithful ocean free against.
+      </p>
+      <p>
+        Moral battle self pinnacle strong reason passion holiest madness. Snare
+        transvaluation decrepit overcome faith ubermensch superiority society
+        passion free play fearful fearful pinnacle. Overcome noble moral self
+        justice evil pinnacle. Evil hope burying sexuality suicide play chaos
+        play gains intentions love play morality. Play prejudice deceptions
+        against depths joy zarathustra fearful battle. Inexpedient ocean ascetic
+        pious pinnacle reason right play christian. Selfish pious holiest right
+        good dead abstract mountains right philosophy hope right.
+      </p>
+    </div>
+    <script
+      src="./js/cloudinary-core-shrinkwrap.min.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      window.addEventListener("load", function() {
+        var cl = cloudinary.Cloudinary.new({ cloud_name: "sambrace" });
+        // Call
+        cl.responsive();
+      });
+    </script>
+  </body>
+</html>
